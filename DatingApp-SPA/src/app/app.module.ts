@@ -7,6 +7,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 import { AppComponent } from './app.component';
@@ -59,7 +60,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      TimeAgoPipe
    ],
    imports: [
       BrowserModule,
