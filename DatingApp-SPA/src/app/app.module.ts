@@ -35,6 +35,8 @@ import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 
 
@@ -72,6 +74,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       BsDropdownModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       NgxGalleryModule,
+      ButtonsModule,
       FileUploadModule,
       TabsModule.forRoot(),
       JwtModule.forRoot({
@@ -81,7 +84,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
           disallowedRoutes: ['localhost:5000/api/auth']
         }
       }),
-      BsDatepickerModule.forRoot()
+      BsDatepickerModule.forRoot(),
+      PaginationModule.forRoot()
    ],
    providers: [
       AuthService,
